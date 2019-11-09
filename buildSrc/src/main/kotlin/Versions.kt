@@ -18,8 +18,8 @@ object Versions {
 
     const val com_android_tools_build_gradle: String = "3.6.0-beta03"
 
-    const val digital_wup_android_maven_publish_gradle_plugin: String = "3.6.2"
-             // available: "3.6.3"
+    const val digital_wup_android_maven_publish_gradle_plugin: String = "3.6.3"
+
 
     const val de_fayard_buildsrcversions_gradle_plugin: String = "0.7.0"
 
@@ -36,8 +36,6 @@ object Versions {
     const val material: String = "1.0.0"
 
     const val aapt2: String = "3.6.0-beta03-5836729"
-
-    const val lib1: String = "0.0.0"
 
     /**
      * Current version: "6.0"

@@ -97,9 +97,4 @@ object Libs {
      * https://developer.android.com/studio
      */
     const val aapt2: String = "com.android.tools.build:aapt2:" + Versions.aapt2
-
-    /**
-     * https://github.com/danbrough/jitpackdemo
-     */
-    const val lib1: String = "com.github.danbrough.jitpackdemo:lib1:" + Versions.lib1
 }
