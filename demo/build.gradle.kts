@@ -46,9 +46,7 @@ android {
 dependencies {
 
 
-    //implementation(Libs.lib1)
-
-    implementation(Libs.lib1)
+    implementation(project(":lib2"))
 
     implementation(project(":lib2"))
 

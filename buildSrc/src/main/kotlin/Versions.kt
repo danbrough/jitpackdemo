@@ -37,7 +37,7 @@ object Versions {
 
     const val aapt2: String = "3.6.0-beta03-5836729"
 
-    const val lib1: String = "0.0.10"
+    const val lib1: String = "0.0.0"
 
     /**
      * Current version: "6.0"
