@@ -6,7 +6,7 @@ plugins {
   id("com.github.dcendents.android-maven") // IMPORTANT BIT
 }
 
-group = "com.github.danbrough" // IMPORTANT BIT
+group = "com.github.danbrough.jitpackdemo" // IMPORTANT BIT
 
 
 android {
