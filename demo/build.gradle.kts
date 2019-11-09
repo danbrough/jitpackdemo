@@ -43,10 +43,10 @@ android {
 }
 
 
-dependencies {
+dependencies {git 
 
 
-  implementation("com.github.danbrough.jitpackdemo:lib1:0.0.1")
+  implementation("com.github.danbrough.jitpackdemo:lib1:0.0.2")
   implementation(project(":lib2"))
 
 
