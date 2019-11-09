@@ -7,7 +7,7 @@ plugins {
     `maven-publish`
 }
 
-
+group = "com.github.danbrough.jitpackdemo"
 
 android {
     compileSdkVersion(ProjectVersions.SDK_VERSION)
