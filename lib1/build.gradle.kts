@@ -1,16 +1,14 @@
-apply {
-  plugin("com.github.dcendents.android-maven")
-}
+
+
 
 group = "com.github.danbrough.jitpackdemo" // IMPORTANT BIT
-
+version = "0.0.0"
 
 plugins {
   id("com.android.library")
   kotlin("android")
   kotlin("kapt")
   kotlin("android.extensions")
-
 }
 
 
@@ -74,3 +72,4 @@ dependencies {
 }
 
 
+apply(from="https://raw.githubusercontent.com/sky-uk/gradle-maven-plugin/master/gradle-mavenizer.gradle")
