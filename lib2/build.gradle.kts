@@ -1,13 +1,9 @@
-
-
-/*
-
 apply {
     plugin("com.github.dcendents.android-maven")
 }
-*/
 
 group = "com.github.danbrough.jitpackdemo" // IMPORTANT BIT
+
 
 plugins {
     id("com.android.library")
