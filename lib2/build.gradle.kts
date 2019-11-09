@@ -49,7 +49,7 @@ android {
                 groupId = "com.github.danbrough.jitpackdemo"
                 artifactId = "lib2"
                 version = "0.0.10"
-                artifact("$buildDir/outputs/aar/lib2-debug.aar")
+                artifact("$buildDir/outputs/aar/lib2-release.aar")
             }
         }
     }

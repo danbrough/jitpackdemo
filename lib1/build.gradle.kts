@@ -7,7 +7,6 @@ plugins {
     `maven-publish`
 }
 
-group = "com.github.danbrough" // IMPORTANT BIT
 
 android {
     compileSdkVersion(ProjectVersions.SDK_VERSION)
@@ -48,8 +47,8 @@ android {
             create<MavenPublication>("maven") {
                 groupId = "com.github.danbrough.jitpackdemo"
                 artifactId = "lib1"
-                version = "0.0.10"
-                artifact("$buildDir/outputs/aar/lib1-debug.aar")
+                version = "0.0.11"
+                artifact("$buildDir/outputs/aar/lib1-release.aar")
             }
         }
     }

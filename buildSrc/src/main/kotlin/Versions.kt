@@ -36,6 +36,8 @@ object Versions {
 
     const val slf4j: String = "1.0.7"
 
+    const val lib1: String = "0.0.10"
+
     /**
      * Current version: "6.0"
      * See issue 19: How to update Gradle itself?
