@@ -18,6 +18,9 @@ object Versions {
 
     const val com_android_tools_build_gradle: String = "3.6.0-beta03"
 
+    const val digital_wup_android_maven_publish_gradle_plugin: String = "3.6.2"
+             // available: "3.6.3"
+
     const val de_fayard_buildsrcversions_gradle_plugin: String = "0.7.0"
 
     const val navigation_safe_args_gradle_plugin: String = "2.1.0"

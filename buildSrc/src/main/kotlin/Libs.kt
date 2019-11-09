@@ -50,6 +50,10 @@ object Libs {
     const val com_android_tools_build_gradle: String = "com.android.tools.build:gradle:" +
             Versions.com_android_tools_build_gradle
 
+    const val digital_wup_android_maven_publish_gradle_plugin: String =
+            "digital.wup.android-maven-publish:digital.wup.android-maven-publish.gradle.plugin:" +
+            Versions.digital_wup_android_maven_publish_gradle_plugin
+
     const val de_fayard_buildsrcversions_gradle_plugin: String =
             "de.fayard.buildSrcVersions:de.fayard.buildSrcVersions.gradle.plugin:" +
             Versions.de_fayard_buildsrcversions_gradle_plugin

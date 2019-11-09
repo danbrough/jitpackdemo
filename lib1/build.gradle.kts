@@ -3,7 +3,7 @@ plugins {
     kotlin("android")
     kotlin("kapt")
     kotlin("android.extensions")
-    id("digital.wup.android-maven-publish") version "3.6.2"
+    id("digital.wup.android-maven-publish") version Versions.digital_wup_android_maven_publish_gradle_plugin
 }
 
 
