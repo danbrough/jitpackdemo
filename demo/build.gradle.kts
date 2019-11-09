@@ -46,8 +46,8 @@ android {
 dependencies {
 
 
-  implementation("com.github.danbrough.jitpackdemo:lib1:0.0.0@aar")
-  implementation(project(":lib2"))
+  implementation("com.github.danbrough.jitpackdemo:lib2:0.0.0")
+  implementation(project(":lib1"))
 
 
   implementation(Libs.slf4j_api)
