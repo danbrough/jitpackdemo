@@ -54,7 +54,7 @@ dependencies {
 
 
     implementation(Libs.slf4j_api)
-    implementation(Libs.slf4j)
+    //implementation(Libs.slf4j)
     implementation(Libs.constraintlayout)
     implementation(Libs.material)
 
