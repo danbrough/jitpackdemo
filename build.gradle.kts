@@ -27,7 +27,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        mavenLocal()
+       // mavenLocal()
         maven {
             setUrl("https://jitpack.io") //IMPORTANT BIT
         }

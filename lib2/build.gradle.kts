@@ -4,7 +4,7 @@ plugins {
     kotlin("android")
     kotlin("kapt")
     kotlin("android.extensions")
-
+    `maven-publish`
 }
 
 
@@ -43,6 +43,16 @@ android {
         unitTests.isReturnDefaultValues = true
     }
 
+    publishing {
+        publications {
+            create<MavenPublication>("maven") {
+                groupId = "com.github.danbrough.jitpackdemo"
+                artifactId = "lib2"
+                version = "0.0.10"
+                artifact("$buildDir/outputs/aar/lib2-debug.aar")
+            }
+        }
+    }
 }
 
 

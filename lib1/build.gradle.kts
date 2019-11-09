@@ -46,12 +46,10 @@ android {
     publishing {
         publications {
             create<MavenPublication>("maven") {
-                groupId = "com.github.danbrough"
-                artifactId = "jitpackdemo"
-                version = "0.0.9"
-
+                groupId = "com.github.danbrough.jitpackdemo"
+                artifactId = "lib1"
+                version = "0.0.10"
                 artifact("$buildDir/outputs/aar/lib1-debug.aar")
-
             }
         }
     }
