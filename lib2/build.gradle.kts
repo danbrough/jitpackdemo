@@ -4,7 +4,9 @@ plugins {
     kotlin("android")
     kotlin("kapt")
     kotlin("android.extensions")
-    `maven-publish`
+    //`maven-publish`
+    id("digital.wup.android-maven-publish") version "3.6.2"
+
 }
 
 group = "com.github.danbrough.jitpackdemo"
@@ -45,12 +47,20 @@ android {
 
     publishing {
         publications {
-            create<MavenPublication>("maven") {
+
+            create<MavenPublication>("mavenAar") {
                 groupId = "com.github.danbrough.jitpackdemo"
                 artifactId = "lib2"
                 version = ProjectVersions.VERSION_NAME
-                artifact("$buildDir/outputs/aar/lib2-release.aar")
+                from(components["android"])
             }
+/*
+            create<MavenPublication>("maven") {
+                groupId = "com.github.danbrough.jitpackdemo"
+                artifactId = "lib1"
+                version = ProjectVersions.VERSION_NAME
+                //artifact("$buildDir/outputs/aar/lib1-release.aar")
+            }*/
         }
     }
 }
