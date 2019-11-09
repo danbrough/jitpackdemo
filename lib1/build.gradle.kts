@@ -48,14 +48,10 @@ android {
             create<MavenPublication>("maven") {
                 groupId = "com.github.danbrough"
                 artifactId = "jitpackdemo"
-                version = "0.0.8"
+                version = "0.0.9"
 
-                components.names.forEach {
-                    println("NAME :$it")
-                }
-                artifact("$buildDir/outputs/aar/lib1-release.aar")
+                artifact("$buildDir/outputs/aar/lib1-debug.aar")
 
-                //from(components["java"])
             }
         }
     }
