@@ -34,8 +34,6 @@ object Versions {
 
     const val aapt2: String = "3.6.0-beta03-5836729"
 
-    const val slf4j: String = "1.0.7"
-
     const val lib1: String = "0.0.10"
 
     /**

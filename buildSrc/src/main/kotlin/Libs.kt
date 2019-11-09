@@ -95,11 +95,6 @@ object Libs {
     const val aapt2: String = "com.android.tools.build:aapt2:" + Versions.aapt2
 
     /**
-     * https://github.com/danbrough/util
-     */
-    const val slf4j: String = "com.github.danbrough.util:slf4j:" + Versions.slf4j
-
-    /**
      * https://github.com/danbrough/jitpackdemo
      */
     const val lib1: String = "com.github.danbrough.jitpackdemo:lib1:" + Versions.lib1
