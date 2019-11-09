@@ -7,5 +7,5 @@ class Library2 {
     get() = "Hello from Library2 at ${Date()}"
 }
 
-private val log = org.slf4j.LoggerFactory.getLogger(Library1::class.java)
+private val log = org.slf4j.LoggerFactory.getLogger(Library2::class.java)
 
