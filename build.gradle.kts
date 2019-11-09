@@ -6,7 +6,7 @@ buildscript {
     classpath(Libs.navigation_safe_args_gradle_plugin)
 
     // Libs.android_maven_gradle_plugin is "com.github.dcendents:android-maven-gradle-plugin:2.1"
-    classpath(Libs.android_maven_gradle_plugin) //IMPORTANT BIT
+  //  classpath(Libs.android_maven_gradle_plugin) //IMPORTANT BIT
 
   }
 
