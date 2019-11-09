@@ -48,7 +48,7 @@ android {
             create<MavenPublication>("maven") {
                 groupId = "com.github.danbrough.jitpackdemo"
                 artifactId = "lib2"
-                version = "0.0.10"
+                version = ProjectVersions.VERSION_NAME
                 artifact("$buildDir/outputs/aar/lib2-release.aar")
             }
         }
