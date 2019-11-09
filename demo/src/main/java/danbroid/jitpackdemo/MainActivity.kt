@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import danbroid.lib1.Library1
+import danbroid.lib2.Library2
 import kotlinx.android.synthetic.main.activity_main.*
 
 
