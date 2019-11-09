@@ -7,7 +7,7 @@ plugins {
 }
 
 
-group = "com.github.danbrough.jitpackdemo"
+//group = "com.github.danbrough.jitpackdemo"
 
 android {
     compileSdkVersion(ProjectVersions.SDK_VERSION)
