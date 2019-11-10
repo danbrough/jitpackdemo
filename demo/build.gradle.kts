@@ -46,8 +46,8 @@ android {
 dependencies {
 
 
-   // implementation(project(":lib1"))
-   implementation("com.github.danbrough.jitpackdemo:lib1:1.0.4")
+    implementation(project(":lib1"))
+   //implementation("com.github.danbrough.jitpackdemo:lib1:1.0.4")
 
     implementation(project(":lib2"))
 
