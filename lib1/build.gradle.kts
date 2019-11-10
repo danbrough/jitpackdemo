@@ -60,8 +60,7 @@ publishing {
     publications {
         // Publish the release aar artifact
         register("mavenAar", MavenPublication::class) {
-            //  from(components["android"])
-            groupId = "danbroid"
+            groupId = "danbroid.jetpackdemo"
             artifactId = "lib1"
             version = ProjectVersions.VERSION_NAME
             from(components["android"])

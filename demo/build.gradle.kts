@@ -1,61 +1,56 @@
 plugins {
-    id("com.android.application")
-    kotlin("android")
-    kotlin("kapt")
-    kotlin("android.extensions")
-    id("androidx.navigation.safeargs.kotlin")
+  id("com.android.application")
+  kotlin("android")
+  kotlin("kapt")
+  kotlin("android.extensions")
+  id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
-    compileSdkVersion(ProjectVersions.SDK_VERSION)
+  compileSdkVersion(ProjectVersions.SDK_VERSION)
 
-    defaultConfig {
+  defaultConfig {
 
-        minSdkVersion(ProjectVersions.MIN_SDK_VERSION)
-        targetSdkVersion(ProjectVersions.SDK_VERSION)
-        versionCode = ProjectVersions.VERSION_CODE
-        versionName = ProjectVersions.VERSION_NAME
-        multiDexEnabled = true
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-       // consumerProguardFiles("consumer-rules.pro")
-    }
+    minSdkVersion(ProjectVersions.MIN_SDK_VERSION)
+    targetSdkVersion(ProjectVersions.SDK_VERSION)
+    versionCode = ProjectVersions.VERSION_CODE
+    versionName = ProjectVersions.VERSION_NAME
+    multiDexEnabled = true
+    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    // consumerProguardFiles("consumer-rules.pro")
+  }
 
 
-    compileOptions {
-        sourceCompatibility = ProjectVersions.JAVA_VERSION
-        targetCompatibility = ProjectVersions.JAVA_VERSION
-    }
+  compileOptions {
+    sourceCompatibility = ProjectVersions.JAVA_VERSION
+    targetCompatibility = ProjectVersions.JAVA_VERSION
+  }
 
-    dataBinding {
-        isEnabled = false
-    }
+  dataBinding {
+    isEnabled = false
+  }
 
-    androidExtensions {
-        isExperimental = true
-    }
-
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions {
-            jvmTarget = "1.8"
-            // freeCompilerArgs = listOf("-Xuse-experimental=kotlin.Experimental")
-        }
-    }
+  androidExtensions {
+    isExperimental = true
+  }
 }
 
 
 dependencies {
 
 
-    implementation(project(":lib1"))
-   //implementation("com.github.danbrough.jitpackdemo:lib1:1.0.4")
+  implementation(project(":lib1"))
+  implementation("com.github.danbrough.jitpackdemo:lib1:1.0.4")
 
-    implementation(project(":lib2"))
+  implementation(project(":lib2"))
+
+  //implementation("com.github.danbrough.jitpackdemo:lib2:1.0.4")
 
 
-    implementation(Libs.slf4j_api)
-    //implementation(Libs.slf4j)
-    implementation(Libs.constraintlayout)
-    implementation(Libs.material)
+  implementation(Libs.slf4j_api)
+  //implementation(Libs.slf4j)
+  implementation(Libs.constraintlayout)
+  implementation(Libs.material)
 
 
 }
