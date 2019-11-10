@@ -17,7 +17,6 @@ android {
     versionName = ProjectVersions.VERSION_NAME
     multiDexEnabled = true
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    // consumerProguardFiles("consumer-rules.pro")
   }
 
 
@@ -41,7 +40,7 @@ dependencies {
 
   implementation(project(":lib1"))
   //implementation("com.github.danbrough.jitpackdemo:lib1:1.0.4")
-  implementation("com.github.danbrough.util:slf4j:1.0.8")
+  implementation("com.github.danbrough.util:slf4j:1.0.11")
 
   implementation(project(":lib2"))
 

@@ -31,7 +31,7 @@ android {
     buildTypes {
 
         getByName("release") {
-            isMinifyEnabled = false
+            isMinifyEnabled = false // IMPORTANT BIT else you release aar will have no classes
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -64,8 +64,6 @@ publishing {
             artifactId = "lib1"
             version = ProjectVersions.VERSION_NAME
             from(components["android"])
-
-            //artifact("$buildDir/outputs/aar/mylibrary-debug.aar")
             artifact(sourcesJar.get())
         }
     }
