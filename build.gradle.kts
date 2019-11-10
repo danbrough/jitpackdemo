@@ -8,7 +8,9 @@ buildscript {
         classpath(Libs.navigation_safe_args_gradle_plugin)
 
         // Libs.android_maven_gradle_plugin is "com.github.dcendents:android-maven-gradle-plugin:2.1"
-        classpath(Libs.android_maven_gradle_plugin) //IMPORTANT BIT
+       //
+        // classpath(Libs.android_maven_gradle_plugin) //IMPORTANT BIT
+
 
     }
 
@@ -27,7 +29,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-       // mavenLocal()
+       mavenLocal()
         maven {
             setUrl("https://jitpack.io") //IMPORTANT BIT
         }
@@ -43,3 +45,14 @@ allprojects {
 
 }
 
+tasks.register("projectVersion") {
+    this.description = "Prints the VERSION_NAME,VERSION_CODE from ProjectVersions"
+    var versionCode = ProjectVersions.VERSION_CODE
+    if (project.properties.containsKey("INCREMENT_VERSION")) {
+        versionCode++
+    }
+    if (project.hasProperty("VERSION_CODE")) {
+        versionCode = project.properties["VERSION_CODE"].toString().toInt()
+    }
+    println(ProjectVersions.getVersionName(versionCode))
+}

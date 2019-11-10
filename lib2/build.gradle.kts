@@ -45,22 +45,25 @@ android {
         unitTests.isReturnDefaultValues = true
     }
 
-    publishing {
-        publications {
+    val sourcesJar by tasks.registering(Jar::class) {
+        archiveClassifier.set("sources")
+        from(android.sourceSets.getByName("main").java.srcDirs)
+        //to("$buildDir/sources.jar")
+    }
 
-            create<MavenPublication>("mavenAar") {
-                groupId = "com.github.danbrough.jitpackdemo"
+    publishing {
+
+        publications {
+            // Publish the release aar artifact
+            register("mavenAar", MavenPublication::class) {
+                //  from(components["android"])
+                groupId = "danbroid.jitpackdemo"
                 artifactId = "lib2"
                 version = ProjectVersions.VERSION_NAME
-                from(components["android"])
+
+                //artifact("$buildDir/outputs/aar/mylibrary-debug.aar")
+                artifact(sourcesJar.get())
             }
-/*
-            create<MavenPublication>("maven") {
-                groupId = "com.github.danbrough.jitpackdemo"
-                artifactId = "lib1"
-                version = ProjectVersions.VERSION_NAME
-                //artifact("$buildDir/outputs/aar/lib1-release.aar")
-            }*/
         }
     }
 }

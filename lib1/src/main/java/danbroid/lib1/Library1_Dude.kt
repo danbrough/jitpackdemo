@@ -2,10 +2,10 @@ package danbroid.lib1
 
 import java.util.*
 
-class Library1 {
+class Library1_Dude {
   val message: String
     get() = "Hello from Library1 at ${Date()}"
 }
 
-private val log = org.slf4j.LoggerFactory.getLogger(Library1::class.java)
+private val log = org.slf4j.LoggerFactory.getLogger(Library1_Dude::class.java)
 

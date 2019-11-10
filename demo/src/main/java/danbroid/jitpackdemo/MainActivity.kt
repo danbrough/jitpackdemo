@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     setSupportActionBar(toolbar)
 
 
-    message1.text = danbroid.lib1.Library1().message
+    message1.text = danbroid.lib1.Library1_Dude().message
     message2.text = Library2().message
 
 
