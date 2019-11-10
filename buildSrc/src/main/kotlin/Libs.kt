@@ -66,13 +66,6 @@ object Libs {
             Versions.navigation_safe_args_gradle_plugin
 
     /**
-     * https://github.com/dcendents/android-maven-gradle-plugin
-     */
-    const val android_maven_gradle_plugin: String =
-            "com.github.dcendents:android-maven-gradle-plugin:" +
-            Versions.android_maven_gradle_plugin
-
-    /**
      * http://tools.android.com
      */
     const val constraintlayout: String = "androidx.constraintlayout:constraintlayout:" +
@@ -97,4 +90,14 @@ object Libs {
      * https://developer.android.com/studio
      */
     const val aapt2: String = "com.android.tools.build:aapt2:" + Versions.aapt2
+
+    /**
+     * https://github.com/danbrough/util
+     */
+    const val slf4j: String = "com.github.danbrough.util:slf4j:" + Versions.slf4j
+
+    /**
+     * https://github.com/danbrough/jitpackdemo
+     */
+    const val lib1: String = "com.github.danbrough.jitpackdemo:lib1:" + Versions.lib1
 }
