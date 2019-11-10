@@ -41,6 +41,7 @@ dependencies {
 
   implementation(project(":lib1"))
   //implementation("com.github.danbrough.jitpackdemo:lib1:1.0.4")
+  implementation("com.github.danbrough.util:slf4j:1.0.8")
 
   implementation(project(":lib2"))
 
