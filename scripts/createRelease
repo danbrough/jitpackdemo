@@ -46,6 +46,7 @@ sed -i buildSrc/src/main/kotlin/ProjectVersions.kt \
     -e 's:VERSION_CODE = .*:VERSION_CODE = '$VERSION_CODE':g'
 
 git add .
-git commit -am "$VERSION_NAME" && git tag "$VERSION_NAME" && git push && git push origin "$VERSION_NAME"
+git commit -am "$VERSION_NAME"
+git tag "$VERSION_NAME" && git push && git push origin "$VERSION_NAME"
 
 
