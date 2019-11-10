@@ -1,4 +1,6 @@
 
+//THis file is basically the same as the file in lib1 so ignore it
+
 plugins {
     id("com.android.library")
     kotlin("android")
@@ -56,7 +58,7 @@ android {
         publications {
             // Publish the release aar artifact
             register("mavenAar", MavenPublication::class) {
-                groupId = "danbroid.jitpackdemo"
+                groupId = "com.github.danbroid.jitpackdemo"
                 artifactId = "lib2"
                 version = ProjectVersions.VERSION_NAME
                 from(components["android"])

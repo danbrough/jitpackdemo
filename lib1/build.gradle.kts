@@ -52,7 +52,6 @@ android {
 val sourcesJar by tasks.registering(Jar::class) {
     archiveClassifier.set("sources")
     from(android.sourceSets.getByName("main").java.srcDirs)
-    //to("$buildDir/sources.jar")
 }
 
 publishing {
@@ -60,9 +59,11 @@ publishing {
     publications {
         // Publish the release aar artifact
         register("mavenAar", MavenPublication::class) {
-            groupId = "danbroid.jetpackdemo"
-            artifactId = "lib1"
-            version = ProjectVersions.VERSION_NAME
+            groupId = "com.github.danbroid.jitpackdemo" //change danbroid to your github username and
+            //jitpack demo to the name of your github project
+            artifactId = "lib1" // the name of this module
+            version = ProjectVersions.VERSION_NAME // this needs to be the same as the github release
+            // you create a github release with "git tag TAGNAME; git push origin TAGNAME" see ../scripts/createRelease
             from(components["android"])
             artifact(sourcesJar.get())
         }
