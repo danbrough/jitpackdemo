@@ -1,11 +1,11 @@
 
 plugins {
+    id("digital.wup.android-maven-publish") version Versions.digital_wup_android_maven_publish_gradle_plugin
 
     id("com.android.library")
     kotlin("android")
     kotlin("kapt")
     kotlin("android.extensions")
-    id("digital.wup.android-maven-publish") version Versions.digital_wup_android_maven_publish_gradle_plugin
 }
 
 
@@ -31,7 +31,7 @@ android {
     buildTypes {
 
         getByName("release") {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -45,31 +45,32 @@ android {
         unitTests.isReturnDefaultValues = true
     }
 
-    val sourcesJar by tasks.registering(Jar::class) {
-        archiveClassifier.set("sources")
-        from(android.sourceSets.getByName("main").java.srcDirs)
-        //to("$buildDir/sources.jar")
-    }
 
-    publishing {
-
-        publications {
-            // Publish the release aar artifact
-            register("mavenAar", MavenPublication::class) {
-                //  from(components["android"])
-                groupId = "danbroid.jitpackdemo"
-                artifactId = "lib1"
-                version = ProjectVersions.VERSION_NAME
-
-                //artifact("$buildDir/outputs/aar/mylibrary-debug.aar")
-                artifact(sourcesJar.get())
-            }
-        }
-    }
 }
 
 
+val sourcesJar by tasks.registering(Jar::class) {
+    archiveClassifier.set("sources")
+    from(android.sourceSets.getByName("main").java.srcDirs)
+    //to("$buildDir/sources.jar")
+}
 
+publishing {
+
+    publications {
+        // Publish the release aar artifact
+        register("mavenAar", MavenPublication::class) {
+            //  from(components["android"])
+            groupId = "danbroid"
+            artifactId = "lib1"
+            version = ProjectVersions.VERSION_NAME
+            from(components["android"])
+
+            //artifact("$buildDir/outputs/aar/mylibrary-debug.aar")
+            //artifact(sourcesJar.get())
+        }
+    }
+}
 
 tasks.withType<Test> {
     useJUnit()
