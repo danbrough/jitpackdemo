@@ -6,3 +6,15 @@ This project consists of 3 gradle modules "demo" (an android app) "lib1" and "li
 `./gradlew publishToMavenLocal` will publish to your local maven repository, or if the code is on github then its published automatically
 via https://jitpack.io
 
+Have a look at the 3 build.gradle.kts files.
+lib1 and lib2 are pretty much identical and publish their libraries to maven.
+
+The demo uses the builds from jitpack.io rather than the local projects.
+
+The publishing configurations in lib1/build.gradle.kts and lib2/build.gradle.kts also
+include the source code jars as well.
+
+ 
+
+
+
