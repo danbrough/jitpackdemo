@@ -54,5 +54,9 @@ tasks.register("projectVersion") {
   if (project.hasProperty("VERSION_CODE")) {
     versionCode = project.properties["VERSION_CODE"].toString().toInt()
   }
-  println("VersionCode: ${ProjectVersions.getVersionName(versionCode)}")
+
+  doLast {
+    println(ProjectVersions.getVersionName(versionCode))
+  }
+
 }
