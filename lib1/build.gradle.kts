@@ -67,7 +67,7 @@ publishing {
             from(components["android"])
 
             //artifact("$buildDir/outputs/aar/mylibrary-debug.aar")
-            //artifact(sourcesJar.get())
+            artifact(sourcesJar.get())
         }
     }
 }
