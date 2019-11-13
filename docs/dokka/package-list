@@ -1,6 +1,0 @@
-$dokka.format:gfm
-$dokka.linkExtension:md
-
-danbroid.jitpackdemo
-danbroid.lib1
-danbroid.lib2
