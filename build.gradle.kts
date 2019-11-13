@@ -1,3 +1,4 @@
+import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
@@ -23,6 +24,7 @@ buildscript {
 
 plugins {
   buildSrcVersions
+  id("org.jetbrains.dokka") version Versions.org_jetbrains_dokka_gradle_plugin
 }
 
 allprojects {
@@ -44,6 +46,16 @@ allprojects {
   }
 
 }
+
+tasks {
+  val dokka by getting(DokkaTask::class) {
+    outputFormat = "gfm"
+    outputDirectory = "$rootDir/docs"
+
+    subProjects = listOf("demo","lib1","lib2") //listOf("demo", "util", "permissions", "slf4j")
+  }
+}
+
 
 tasks.register("projectVersion") {
   this.description = "Prints the VERSION_NAME,VERSION_CODE from ProjectVersions"

@@ -12,6 +12,8 @@ import org.gradle.plugin.use.PluginDependencySpec
  * YOU are responsible for updating manually the dependency version.
  */
 object Versions {
+    const val com_github_danbrough_jitpackdemo: String = "1.0.2"
+
     const val org_jetbrains_kotlin: String = "1.3.50"
 
     const val androidx_multidex: String = "2.0.0"
@@ -24,6 +26,8 @@ object Versions {
 
     const val navigation_safe_args_gradle_plugin: String = "2.1.0"
 
+    const val org_jetbrains_dokka_gradle_plugin: String = "0.10.0"
+
     const val constraintlayout: String = "1.1.3"
 
     const val lint_gradle: String = "26.6.0-beta03"
@@ -33,10 +37,6 @@ object Versions {
     const val material: String = "1.0.0"
 
     const val aapt2: String = "3.6.0-beta03-5836729"
-
-    const val slf4j: String = "1.0.11"
-
-    const val lib1: String = "1.0.0"
 
     /**
      * Current version: "6.0"

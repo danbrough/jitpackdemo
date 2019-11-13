@@ -8,6 +8,18 @@ import kotlin.String
  */
 object Libs {
     /**
+     * https://github.com/danbrough/jitpackdemo
+     */
+    const val lib1: String = "com.github.danbrough.jitpackdemo:lib1:" +
+            Versions.com_github_danbrough_jitpackdemo
+
+    /**
+     * https://github.com/danbrough/jitpackdemo
+     */
+    const val lib2: String = "com.github.danbrough.jitpackdemo:lib2:" +
+            Versions.com_github_danbrough_jitpackdemo
+
+    /**
      * https://kotlinlang.org/
      */
     const val kotlin_android_extensions: String =
@@ -65,6 +77,10 @@ object Libs {
             "androidx.navigation:navigation-safe-args-gradle-plugin:" +
             Versions.navigation_safe_args_gradle_plugin
 
+    const val org_jetbrains_dokka_gradle_plugin: String =
+            "org.jetbrains.dokka:org.jetbrains.dokka.gradle.plugin:" +
+            Versions.org_jetbrains_dokka_gradle_plugin
+
     /**
      * http://tools.android.com
      */
@@ -90,14 +106,4 @@ object Libs {
      * https://developer.android.com/studio
      */
     const val aapt2: String = "com.android.tools.build:aapt2:" + Versions.aapt2
-
-    /**
-     * https://github.com/danbrough/util
-     */
-    const val slf4j: String = "com.github.danbrough.util:slf4j:" + Versions.slf4j
-
-    /**
-     * https://github.com/danbrough/jitpackdemo
-     */
-    const val lib1: String = "com.github.danbrough.jitpackdemo:lib1:" + Versions.lib1
 }
