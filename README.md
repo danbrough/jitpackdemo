@@ -5,7 +5,7 @@ This project consists of 3 gradle modules "demo" (an android app) "lib1" and "li
 
 `./gradlew publishToMavenLocal` will publish to your local maven repository which can then be accessed
 from local projects by adding `mavenLocal()` to you gradle maven repositories, or if the code is on github 
-then its built and published automatically via the (https://jitpack.io) maven repository.
+then its built and published automatically via the https://jitpack.io maven repository.
 
 Have a look at the 3 build.gradle.kts files.
 lib1 and lib2 are pretty much identical and publish their libraries to maven.
