@@ -3,3 +3,6 @@
 # &lt;init&gt;
 
 `MainActivity()`
+
+The main activity
+

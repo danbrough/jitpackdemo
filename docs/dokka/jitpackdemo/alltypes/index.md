@@ -18,6 +18,8 @@
 
 ##### [danbroid.jitpackdemo.MainActivity](../danbroid.jitpackdemo/-main-activity/index.md)
 
+The main activity
+
 
 |
 

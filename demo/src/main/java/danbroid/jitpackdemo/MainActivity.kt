@@ -8,6 +8,9 @@ import danbroid.lib2.Library2
 import kotlinx.android.synthetic.main.activity_main.*
 
 
+/**
+ * The main activity
+ */
 class MainActivity : AppCompatActivity() {
 
 

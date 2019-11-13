@@ -4,11 +4,13 @@
 
 `class MainActivity : AppCompatActivity`
 
+The main activity
+
 ### Constructors
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `MainActivity()` |
+| [&lt;init&gt;](-init-.md) | The main activity`MainActivity()` |
 
 ### Functions
 
