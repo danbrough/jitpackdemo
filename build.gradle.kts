@@ -44,7 +44,7 @@ allprojects {
 
 tasks {
   val dokka by getting(DokkaTask::class) {
-    outputFormat = "html" //or gfm 
+    outputFormat = "gfm"
     outputDirectory = "$rootDir/docs"
 
     subProjects = listOf("demo","lib1","lib2") //listOf("demo", "util", "permissions", "slf4j")
