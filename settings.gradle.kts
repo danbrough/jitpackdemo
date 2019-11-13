@@ -1,3 +1,3 @@
-include(":demo",":lib1",":lib2")
+include(":lib1",":lib2",":demo")
 
 rootProject.name = "jitpackdemo"
