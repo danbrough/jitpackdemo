@@ -12,7 +12,7 @@ lib1 and lib2 are pretty much identical and publish their libraries to maven.
 
 The demo uses the builds from jitpack.io rather than the local projects.
 
-The publishing configurations in [lib1/build.gradle.kts] and [lib2/build.gradle.kts] also
+The publishing configurations in (lib1/build.gradle.kts)[lib1/build.gradle.kts] and (lib2/build.gradle.kts)[lib2/build.gradle.kts] also
 include the source code jars as well.
 
 
