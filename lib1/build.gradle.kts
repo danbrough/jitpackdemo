@@ -1,92 +1,76 @@
-
 plugins {
-    id("digital.wup.android-maven-publish") version Versions.digital_wup_android_maven_publish_gradle_plugin
-
-    id("com.android.library")
-    kotlin("android")
-    kotlin("kapt")
-    kotlin("android.extensions")
+  id("com.android.library")
+  kotlin("android")
+  kotlin("android.extensions")
+  id("maven-publish")
 }
 
 
 //group = "com.github.danbrough.jitpackdemo"
 
 android {
-    compileSdkVersion(ProjectVersions.SDK_VERSION)
-    defaultConfig {
-        minSdkVersion(ProjectVersions.MIN_SDK_VERSION)
-        targetSdkVersion(ProjectVersions.SDK_VERSION)
-        versionCode = ProjectVersions.VERSION_CODE
-        versionName = ProjectVersions.VERSION_NAME
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
+  compileSdkVersion(30)
+  defaultConfig {
+    minSdkVersion(19)
+    targetSdkVersion(30)
+    versionCode = 1
+    versionName = "1.0"
+    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    consumerProguardFiles("consumer-rules.pro")
 
+  }
+
+  compileOptions {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+  }
+
+  buildTypes {
+    getByName("release") {
+      isMinifyEnabled = false // IMPORTANT BIT else you release aar will have no classes
+      proguardFiles(
+        getDefaultProguardFile("proguard-android-optimize.txt"),
+        "proguard-rules.pro"
+      )
     }
-
-    compileOptions {
-        sourceCompatibility = ProjectVersions.JAVA_VERSION
-        targetCompatibility = ProjectVersions.JAVA_VERSION
-    }
-
-    buildTypes {
-
-        getByName("release") {
-            isMinifyEnabled = false // IMPORTANT BIT else you release aar will have no classes
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-
-    }
-
-    testOptions {
-        unitTests.isIncludeAndroidResources = true
-        unitTests.isReturnDefaultValues = true
-    }
+  }
 
 
 }
-
 
 val sourcesJar by tasks.registering(Jar::class) {
-    archiveClassifier.set("sources")
-    from(android.sourceSets.getByName("main").java.srcDirs)
+  archiveClassifier.set("sources")
+  from(android.sourceSets.getByName("main").java.srcDirs)
 }
 
-publishing {
-
+afterEvaluate {
+  publishing {
     publications {
-        // Publish the release aar artifact
-        register("mavenAar", MavenPublication::class) {
-            groupId = "com.github.danbroid.jitpackdemo" //change danbroid to your github username and
-            //jitpack demo to the name of your github project
-            artifactId = "lib1" // the name of this module
-            version = ProjectVersions.VERSION_NAME // this needs to be the same as the github release
-            // you create a github release with "git tag TAGNAME; git push origin TAGNAME" see ../scripts/createRelease
-            from(components["android"])
-            artifact(sourcesJar.get())
-        }
+      val release by publications.registering(MavenPublication::class) {
+        from(components["release"])
+        artifact(sourcesJar.get())
+        artifactId = "lib1"
+        groupId = "com.github.danbrough.jitpackdemo"
+        version = "1.0.2"
+      }
     }
+  }
 }
+
 
 tasks.withType<Test> {
-    useJUnit()
-    testLogging {
-        events("standardOut", "started", "passed", "skipped", "failed")
-        showStandardStreams = true
-        /*  outputs.upToDateWhen {
-            false
-          }*/
-    }
+  useJUnit()
+  testLogging {
+    events("standardOut", "started", "passed", "skipped", "failed")
+    showStandardStreams = true
+    /*  outputs.upToDateWhen {
+        false
+      }*/
+  }
 }
 
 dependencies {
-
-    api(Libs.slf4j_api)
-    api(Libs.kotlin_stdlib_jdk8)
-
-
+  implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.0")
 }
 
 
