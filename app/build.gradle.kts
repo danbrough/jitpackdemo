@@ -29,7 +29,7 @@ android {
 dependencies {
 
 
-  implementation("com.github.danbrough.jitpackdemo:lib1:1.0.2")
+  implementation("com.github.danbrough.jitpackdemo:lib1:1.0.2") //1.0.2 is the tag on github
   implementation("com.github.danbrough.jitpackdemo:lib2:1.0.2")
 
   implementation("androidx.constraintlayout:constraintlayout:2.0.1")
