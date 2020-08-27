@@ -6,12 +6,12 @@ plugins {
 }
 
 android {
-  compileSdkVersion(30)
+  compileSdkVersion(Constants.SDK_VERSION)
 
   defaultConfig {
 
-    minSdkVersion(19)
-    targetSdkVersion(30)
+    minSdkVersion(Constants.MIN_SDK)
+    targetSdkVersion(Constants.TARGET_SDK)
     versionCode = 1
     versionName = "1.0"
     multiDexEnabled = true

@@ -5,14 +5,11 @@ plugins {
   id("maven-publish")
 }
 
-
-//group = "com.github.danbrough.jitpackdemo"
-
 android {
-  compileSdkVersion(30)
+  compileSdkVersion(Constants.SDK_VERSION)
   defaultConfig {
-    minSdkVersion(19)
-    targetSdkVersion(30)
+    minSdkVersion(Constants.MIN_SDK)
+    targetSdkVersion(Constants.TARGET_SDK)
     versionCode = 1
     versionName = "1.0"
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -70,7 +67,7 @@ tasks.withType<Test> {
 }
 
 dependencies {
-  implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.0")
+  implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Constants.kotlin_version}")
 }
 
 
